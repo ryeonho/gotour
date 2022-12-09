@@ -9,7 +9,7 @@ ARG HOST
 ENV HOST=${HOST:-www.ryeonho.com:443}
 
 EXPOSE 3999
-RUN adduser --system --disabled-password ${USER_NAME}
+RUN adduser --uid 7281--system --disabled-password ${USER_NAME}
 USER ${USER_NAME}
 RUN mkdir /home/${USER_NAME}/go
 ENV GOPATH=/home/${USER_NAME}/go
